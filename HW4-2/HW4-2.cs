@@ -9,16 +9,24 @@ string? InputNumber(string text)
     return Console.ReadLine();
 }
 
-string A = InputNumber("Введите число N:");
+int SumNamber(string text)
+{
+
+    int result = 0;
+    for (int i = 0; i < text.Length; i++)
+    {
+        result = result + ((int)char.GetNumericValue(text[i]));
+    }
+    return result;
+
+}
+
+
+string? A = InputNumber("Введите число N:");
 
 if (int.TryParse(A, out int number))
 {
-    int result = 0;
-    for (int i = 0; i < A.Length; i++)
-    {
-        result = result + ((int)char.GetNumericValue(A[i]));
-    }
-    System.Console.WriteLine("Сумма цифр в веденном числе равна: " + result);
+    System.Console.WriteLine("Сумма цифр в веденном числе равна: " + SumNamber(A));
 }
 
 else System.Console.WriteLine("Введено не число!");

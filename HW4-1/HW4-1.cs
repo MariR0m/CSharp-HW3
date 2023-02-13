@@ -18,25 +18,25 @@ int InputNamber(string str)
     return Convert.ToInt32(Console.ReadLine());
 }
 
-int NumberInDegree (int X, int Y)
+int NumberInDegree(int X, int Y)
 {
-  int number = X;
-  for (int i = 1; i<Y; i++)
-  {
-number = number*X;
-}
-return number;
+    int number = X;
+    for (int i = 1; i < Y; i++)
+    {
+        number = number * X;
+    }
+    return number;
 }
 
 int A = InputNamber("Введите число A: ");
 int B = InputNamber("Введите число B: ");
 
 
-if (B<1)
- {
-   System.Console.WriteLine("Число B не натуральное.");  
+if (B < 1)
+{
+    System.Console.WriteLine("Число B не натуральное.");
 
-   }
+}
 
- else System.Console.WriteLine("Результат вовведения в степень: " + NumberInDegree(A,B));
+else System.Console.WriteLine("Результат вовведения в степень: " + NumberInDegree(A, B));
 

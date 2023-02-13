@@ -5,18 +5,18 @@
 
 int[] FillArray(int size)
 {
-int[] Arr = new int [size];
-for (int i = 0; i < Arr.Length; i++)
-{
-    Arr[i] = new Random().Next(0,101);
-}
-return Arr;
+    int[] Arr = new int[size];
+    for (int i = 0; i < Arr.Length; i++)
+    {
+        Arr[i] = new Random().Next(0, 101);
+    }
+    return Arr;
 }
 
 void PrintArr(int[] array)
 {
     int count = array.Length;
-    System.Console.WriteLine("["+string.Join(", ", array)+"]");
+    System.Console.WriteLine("[" + string.Join(", ", array) + "]");
 }
 
 int[] MyArray = FillArray(12);
