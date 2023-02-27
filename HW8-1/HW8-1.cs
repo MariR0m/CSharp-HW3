@@ -43,32 +43,32 @@ void PrintMatrix(int[,] matrix)
 int[,] PrintDescending(int[,] matrix)
 {
 
-  
-  
+
+
     for (int i = 0; i < matrix.GetLength(0); i++)
     {
         for (int j = 0; j < matrix.GetLength(1); j++)
         {
             int max = j;
-            for (int r=j+1; r<matrix.GetLength(1); r++)
+            for (int r = j + 1; r < matrix.GetLength(1); r++)
             {
-                if (matrix[i,r]>matrix[i,max])
+                if (matrix[i, r] > matrix[i, max])
                 {
-                    max=r;
+                    max = r;
                 }
             }
             Swap(matrix, i, j, max);
         }
-        
-    } 
+
+    }
     return matrix;
 }
 
-void Swap (int[,] matrix, int i, int j, int max)
+void Swap(int[,] matrix, int i, int j, int max)
 {
-int temp = matrix [i,j];
-matrix [i,j] = matrix [i,max];
-matrix [i,max] = temp;
+    int temp = matrix[i, j];
+    matrix[i, j] = matrix[i, max];
+    matrix[i, max] = temp;
 }
 
 int rows = ReadInt("Введите количество строк матрицы: ");

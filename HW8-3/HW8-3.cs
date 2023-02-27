@@ -26,16 +26,16 @@ int[,] GenerateMatrix(int rows, int cols)
     return matrix;
 }
 
-int[,] MatrixProduct (int[,] matrix1, int [,] matrix2)
+int[,] MatrixProduct(int[,] matrix1, int[,] matrix2)
 {
-    int[,] MatrixProduct = new int[matrix1.GetLength(0),matrix2.GetLength(1)];
+    int[,] MatrixProduct = new int[matrix1.GetLength(0), matrix2.GetLength(1)];
     for (int i = 0; i < MatrixProduct.GetLength(0); i++)
     {
         for (int j = 0; j < MatrixProduct.GetLength(1); j++)
         {
             for (int x = 0; x < matrix1.GetLength(1); x++)
             {
-               MatrixProduct[i,j] += matrix1[i,x]*matrix2[x,j];
+                MatrixProduct[i, j] += matrix1[i, x] * matrix2[x, j];
             }
         }
 
